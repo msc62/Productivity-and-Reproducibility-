@@ -1,0 +1,131 @@
+---
+title: 'Reproducible Research - Assignment #1'
+author: "Matthew Christensen"
+date: "October 23, 2010"
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead[LO,LE]{Assignment 1}
+    \fancyhead[RO,RE]{October 23, 2020}
+    \fancyfoot[CO,CE]{\thepage}
+output:
+  bookdown::pdf_document2:
+    toc: false
+    number_sections: false
+    latex_engine: lualatex
+  tufte::tufte_handout:
+    latex_engine: xelatex
+bibliography: Novak.bib
+---
+***
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Factors Influencing Carbon Stocks and Accumulation Rates in Eelgrass Meadows Across New England, USA
+*A. B. Novak & M. C. Pelletier & P. Colarusso & J. Simpson & M. N. Gutierrez & A. Arias-Ortiz, & M. Charpentier & P. Masque & P. Vella*
+
+Published: 27 May 2020
+
+‘Blue carbon’ refers to the carbon sequestered by coastal marine habitats such as eelgrass. [@novakFactorsInfluencingCarbon2020] tested the effects of eutrophication and wave exposure on the amount of carbon stored in eelgrass meadows in New England, USA. The authors collected sediment cores and eelgrass biomass at 11 sites in New England and used multimodel inference [@kennethp.burnhamModelSelectionMultimodel2002] to investigate the relationship between carbon stocks and various environmental variables. The study results corroborated other research findings that less than 50% of C~org~ in eelgrass beds is autochthonous. The study also found that eelgrass meadows had more carbon stored than bare sediment analogues except for sites that had significant nutrient inputs. Sites subject to nutrient loading had higher sediment accumulation rates and therefore higher C~org~. Wave exposure was found to be an important predictor of C~org~ stocks in eelgrass meadows and  %silt-clay was the most important predictor of C~org~ stocks in both eelgrass meadows and bare sediment sites. The study lends insights to future blue carbon models and stock calculations for the Northwest Atlantic and for the globe.
+
+
+#### Determine whether the journal in which the article is published has any form of checklist for authors with respect to transparency and reproducibility. If yes, provide a link.
+
+  >**There is no checklist for authors for transparency and reproducibility**
+
+#### Questions to promote transparent reporting of methods and results
+
+1. Were all sample sizes fully reported, including exact values for all subsets of data (e.g., each treatment group), and for all statistical analyses?   
+    
+    >**Yes**  
+    + If ‘no’, request that authors provide this information.
+   
+2. Are the methods reported in sufficient detail to allow another researcher to gather the same data and run the identical analyses?  
+    
+      >**Yes**
+    + If ‘no’, request that authors provide the relevant information.  
+    
+    + If you are uncertain about some aspect of the methods, state your uncertainty to the editor so that she or he can seek appropriate expertise as needed.  
+   
+3. a) Are statistical results for each test reported in sufficient detail? What qualifies as ‘sufficient detail’ will differ among analyses.  
+
+      >**Yes. Statistical methods are explained in the paper and results reported with reference to supplemental material provided with the paper.**
+      + If ‘no’, request that authors provide this information.  
+      + If you are uncertain, state your uncertainty to the editor so that he or she can seek appropriate statistical expertise as needed. Remember that you may be the only reviewer looking carefully at this aspect of the manuscript.  
+   b) Are results from all variables and from all models reported? Complete reporting should include results related to all variables examined in preliminary models and all results from exploratory analyses.  
+          
+        >**Yes. Exploratory analyses were reported and rationale was given for final models reported. The paper reported both models that performed well and models that did not.**  
+          
+        + If ‘no’, request that authors provide this information.  
+        + If you are uncertain, ask the authors to declare in the paper that all exploratory analyses are reported in full. We recommend using the ‘Standard Reviewer Statement for Disclosure of Sample, Conditions, Measures, and Exclusions’ [see http://osf.io/hadz3]”.
+
+#### Questions to check biases of reviewers and authors
+
+4. Were observers kept unaware of the experimental treatment imposed on the samples (e.g., organisms, plots) when recording observations or measurements so as to minimize unconscious bias?  
+
+    >**No. It is not evident that unconcious bias was considered. The specific locations of cores at site and selection of sites may have had bias.**
+    + If not stated, then request clarification in the manuscript of whether methods were adopted that reduced the possibility of unconscious bias influencing observations.  
+    
+    >**A request has been author to provide clarification any unconcious bia, such as the selection of coring locations within each site.**
+    
+    + If no steps were taken to prevent observer bias, request that an explanation appear in the manuscript of how unconscious bias could have influenced observations.
+    
+    >**Pending clarification of suspected unconcious biases, a request will be made for an expalanation of how it could have influenced the study.**
+
+5. Did the authors explain how sample size was decided (e.g., based on a priori power analysis or logistical constraints), or when an experiment with pre-set sample sizes was terminated? If sample size or the end of the experiment was not decided prior to the initiation of the study, was there a decision rule for when to cease data collection?
+
+    >**The authors did not explain how sample size was decided.**  
+    
+   + If not reported, request that authors provide this information.
+  If the stopping rule included iterative statistical tests or examination of patterns as data accumulated, request that authors acknowledge the bias resulting from this process.
+  
+6. Did the authors develop their analysis plan, including choices of variables, without looking at the data, for instance prior to gathering data or with a dummy data set? This is most easily determined by the existence of a pre-registered analysis plan. In the absence of pre-registration, a statement from the authors about the development of their analysis plan is still important.  
+
+    >**No. The authors did not have a pre-registration and it does not appear that an analysis plan was developed before looking at their data.**  
+
+    + If no, request that authors acknowledge the exploratory nature of their analyses and declare that they are reporting the complete set of results from all exploratory analyses.
+    
+    >**Exploratory anlayses were reported in the paper and supplemental data and figures were provided as well.**  
+    
+    + If authors deviated from their analysis plan, request an explanation of why and how they deviated from the plan.
+  
+7. How suitable do you find the research methods without considering the outcome? Evaluate the design and methods regardless of whether or not there was a finding of “statistical significance”, or whether or not the results conform to a predicted pattern.  
+
+    >**The research methods appear robust and align with other similar studies around the world**
+    
+    + If the methods appear to have been flawed, call attention to the problems and, if possible, recommend a better design. Deciding whether the problems with the methods are sufficient to justify a recommendation of rejection will require your expert judgement. 
+    
+    >**The methods appear to be reasonable. There data collection was quite comprehensive allowing for a lot of different comparisons.**
+    
+    + If uncertain about the suitability of some aspect of the methods, state your uncertainty to the editor so that she or he can seek appropriate methodological expertise as needed.  
+  
+8. Are the sample sizes large enough to justify the authors’ conclusions? If presenting significance tests, how much power would this study have to detect statistically significant weak, moderate, and strong effects? Expectation of effect size can best be derived from average effect sizes presented in meta-analyses of similar topics. The effect size reported in the manuscript under review can be a poor estimate of the underlying effect size, especially if the sample size is small, which elevates sampling uncertainty. Statistical significance is a poor indicator of the reliability of an estimate across a wide range of sample sizes and common effect sizes.  
+    
+    >**The paper reports statistical significance and the sample size is small. The author should include a direct reference of synthesis literature on the subject to date. This would add context to this paper's findings. Any existing synthesis papers should be used to determined required sample size prior to beginning the research as well.**  
+    
+    + If sample sizes are small in a system where effects are expected to be weak to moderate, request that authors avoid inferences based on threshold p-values, acknowledge uncertainty in effect size estimates, and acknowledge the need for further study.  
+    + Do not use sample size as a criterion for recommending publication unless you do so regardless of study outcome (i.e., regardless of reported effect size and regardless of the outcomes of tests for significance).  
+    + Do not use the failure to surpass a significance threshold as a reason to recommend rejection.  
+  
+9. What does the size of the estimated effect (e.g., slope, correlation coefficient, difference in means) suggest about its biological or practical importance, and what does uncertainty around that effect estimate suggest about the estimate’s precision?
+    + If the authors do not interpret their results in terms of the biological relevance of the effect and the uncertainty surrounding their effect estimate, request that they consider doing so.  
+    
+    
+    >**The authors do not report estimated effect size.**
+  
+10. How unexpected would you judge these results to be in light of prior empirically derived understanding? Effects that are more surprising in light of robust prior information are those that had a lower prior probability of being correct.
+    + If a result is unexpected in light of prior evidence and is not supported by very strong new evidence (e.g., multiple lines of convincing evidence), do not recommend against publication on these grounds, but request that the authors acknowledge the tentative nature of their results.  
+    
+    
+    >**These results are not surprising. The paper corroborates past research and presents new information that may streamline future research and practice.** 
+    
+## Link to Markdown File
+
+
+
+
+## Bibliography
+
+
