@@ -15,6 +15,7 @@ output:
     latex_engine: lualatex
   tufte::tufte_handout:
     latex_engine: xelatex
+urlcolor: blue
 bibliography: Novak.bib
 ---
 ***
@@ -121,8 +122,8 @@ Published: 27 May 2020
     
     >**These results are not surprising. The paper corroborates past research and presents new information that may streamline future research and practice.** 
     
-## Link to Markdown File
-
+## Link to Markdown File:
+[Matthew Christensen's Assignment 1 R Markdown Script](https://www.github.com/msc62/Productivity-and-Reproducibility-/blob/main/Reproducible-Research---Assignment--1.Rmd)
 
 
 
